@@ -21,7 +21,7 @@ USE `prueba1` ;
 -- Table `prueba1`.`producto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `prueba1`.`producto` (
-  `id_producto` INT(11) NOT NULL,
+  `id_producto` INT(11) NOT NULL AUTO_INCREMENT,
   `p_nombre` VARCHAR(30) NOT NULL,
   `p_origen` VARCHAR(20) NOT NULL,
   `p_descripcion` VARCHAR(1000) NOT NULL,
@@ -55,13 +55,11 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `prueba1`.`usuario_producto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `prueba1`.`usuario_producto` (
-  `id_producto` INT(11) NOT NULL,
+  `id_producto` INT(11) NOT NULL AUTO_INCREMENT,
   `pagado` INT(11) NOT NULL,
   `cantidad` INT(11) NOT NULL,
   `u_mail` VARCHAR(45) NOT NULL,
   `fecha_compra` VARCHAR(80) NULL DEFAULT NULL,
-  PRIMARY KEY (`id_producto`),
-  UNIQUE INDEX `u_mail_UNIQUE` (`u_mail` ASC) VISIBLE,
   INDEX `id_producto_idx` (`id_producto` ASC) VISIBLE,
   INDEX `u_mail_idx` (`u_mail` ASC) VISIBLE,
   CONSTRAINT `id_producto`

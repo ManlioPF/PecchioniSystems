@@ -8,7 +8,7 @@
     }
 
     if(!isset($_SESSION['sess_user'])){
-      header("Location:../index.php");
+      header("Location:../admin.php");
     }else {
       $admin = $_SESSION['sess_user'];
       if($admin != 'admin@pecchioni.com'){

@@ -3,7 +3,7 @@
   session_start();
 
   if(!isset($_SESSION['sess_user'])){
-    header("Location:admin.php");
+    header("Location:index.php");
   }else {
     $con = mysqli_connect('localhost','root','','prueba1');
 
